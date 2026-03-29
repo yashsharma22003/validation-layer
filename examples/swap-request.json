@@ -1,0 +1,36 @@
+{
+  "agentId": 1,
+  "agentRegistry": "eip155:84532:0x8004A818BFB912233c491871b3d84c89A494BD9e",
+  "mandate": {
+    "core": {
+      "kind": "swap@1",
+      "deadline": 1774810304,
+      "payload": {
+        "tokenIn": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "tokenOut": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "amountIn": "1000000000",
+        "minAmountOut": "500000000000000000",
+        "maxSlippageBps": 50,
+        "chainId": 84532,
+        "deadline": 1774810304
+      }
+    },
+    "clientAddress": "0x1E9C9E4816573eC8a499B7fBD1cD95B4a2484dAb",
+    "serverAddress": "0xbb52E72d72ff77Fea56b5Da984Fa974a132287A4",
+    "clientSig": "0xf16a5556a6d9c6e548d4cba1bb9e06cfcd1e4eb3853d651dad6bd07fb84d81100b8e828091e7d394274f49d8b44d62d913e7dc7f70a52f6ccceb96398de305b31b",
+    "serverSig": "0xcf5c4e41715cf6c401707daa5b6744a9d4c6b67c9e7750b38670df2fcc5b7d050181c117613ac290011cc097521e7739821a5c5e332b6a9dc3435728b460261b1c",
+    "chainId": 84532
+  },
+  "receipt": {
+    "kind": "swap@1",
+    "txHash": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "chainId": 84532,
+    "tokenIn": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "tokenOut": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "amountIn": "1000000000",
+    "amountOut": "520000000000000000",
+    "executedAt": 1774806644,
+    "routerAddress": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+  },
+  "createdAt": "2026-03-29T17:51:44.898Z"
+}

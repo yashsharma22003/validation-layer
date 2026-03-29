@@ -1,0 +1,42 @@
+{
+  "name": "vp-validation-layer",
+  "version": "1.0.0",
+  "description": "Verification + Reputation layer on ERC-8004 using Mandates",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "router": "ts-node src/index.ts",
+    "server": "ts-node src/server.ts",
+    "demo": "ts-node scripts/demo.ts",
+    "submit-request": "ts-node scripts/submit-request.ts",
+    "trust-snapshot": "ts-node scripts/trust-snapshot.ts",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "ethers": "^6.13.0",
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5",
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": ["**/test/**/*.test.ts"],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.json"
+      }
+    }
+  }
+}
