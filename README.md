@@ -79,7 +79,7 @@ VALIDATION_REGISTRY_ADDRESS=0xE825d11F112EcCaF3215c08f8bec12EC4d8Ed3F7
 REPUTATION_REGISTRY_ADDRESS=0x92c4Fe214c00A5B87EB8539F33aCbE68f7f93a3C
 ```
 
-The contracts above are fully deployed on Base Sepolia. (You can also deploy your own using the `erc-8004-contracts` repository by running our updated deployment scripts).
+The contracts above are fully deployed on Base Sepolia. (You can also deploy your own using the included `erc-8004-contracts/` directory by running the deployment scripts).
 
 ---
 
@@ -125,7 +125,15 @@ npm run router
 
 It'll connect to the RPC and start polling for `ValidationRequest` events targeted at your router address.
 
-**2. Submit a request**
+**2. Mint a Test Agent**
+
+Since validation requests enforce exact agent ownership, you must own an Agent NFT on the IdentityRegistry. Run this quick script to mint an agent to your deployer wallet:
+
+```bash
+npx tsx scripts/mint-agent.ts
+```
+
+**3. Submit a request**
 
 ```bash
 npm run submit-request -- --agentId 1 --payloadFile ./examples/swap-request.json
@@ -133,7 +141,7 @@ npm run submit-request -- --agentId 1 --payloadFile ./examples/swap-request.json
 
 This hashes the payload, stores it locally, and calls `validationRequest` on-chain. The Router should pick it up and respond within a block or two.
 
-**3. Check the trust snapshot**
+**4. Check the trust snapshot**
 
 ```bash
 npm run trust-snapshot -- --agentId 1
@@ -309,6 +317,7 @@ Runs fully offline — no RPC or private key needed.
 
 ```
 vp-validation-layer/
+├── erc-8004-contracts/    <-- (On-chain Registries)
 ├── src/
 │   ├── types/
 │   │   ├── mandate.ts
@@ -330,6 +339,7 @@ vp-validation-layer/
 │   └── index.ts
 ├── scripts/
 │   ├── demo.ts
+│   ├── mint-agent.ts
 │   ├── submit-request.ts
 │   └── trust-snapshot.ts
 ├── test/
